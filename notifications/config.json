@@ -1,0 +1,23 @@
+{
+  "base": {
+    "project": "Project UI and API autotests for Stepik",
+    "environment": "PROD",
+    "language": "ru",
+    "allureFolder": "allure-report/",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "5664630493:AAHk48mK7q579x_fXg87iJV4lIFB8K74NlI",
+    "chat": "-136786946",
+    "replyTo": ""
+  },
+  "mail": {
+    "host": "smtp.gmail.com",
+    "port": "465",
+    "username": "qatestmailforqa@gmail.com",
+    "password": "tagfefbpvhyzjnke",
+    "securityProtocol": "SSL",
+    "from": "qatestmailforqa@gmail.com",
+    "recipient": "murova.tester@gmail.com"
+  }
+}

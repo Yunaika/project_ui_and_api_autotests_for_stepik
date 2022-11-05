@@ -1,0 +1,16 @@
+{
+  "base": {
+    "project": "Demo QA",
+    "environment": "PROD",
+    "comment": "",
+    "reportLink": "",
+    "language": "ru",
+    "allureFolder": "allure-report/",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "5473739059:AAFCVZwIhlCi9Wuh3ubtfWxMcuEruuNNf5o",
+    "chat": "-672637104",
+    "replyTo": ""
+  }
+}

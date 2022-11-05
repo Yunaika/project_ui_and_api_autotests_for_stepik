@@ -1,0 +1,96 @@
+# Пример организации автотестирования для образовательной платформы <a target="_blank" href="https://stepik.org/">Stepik</a>
+> Stepik — многофункциональная образовательная платформа и конструктор
+онлайн-курсов. Цель платформы — сделать образование открытым и удобным.
+Размещено более 700 онлайн-курсов.
+
+## :open_book: Содержание:
+- [Описание проекта](#heavy_check_mark-описание)
+- [Кратко](#heavy_check_mark-кратко)
+- [Технологии и инструменты](#gear-технологии-и-инструменты)
+- Что проверяем:
+  - [UI](#heavy_check_mark-реализованные-ui-проверки)
+  - [API](#heavy_check_mark-реализованные-api-проверки)
+- [Запуск тестов из Jenkins](#-запуск-тестов-из-jenkins)
+
+## :heavy_check_mark: Описание
+В проекте представлены примеры UI и API автоматизации на Python. 
+<p>При написании тестов применялись инструменты объектно-ориентированной парадигмы, а также использовался шаблон 
+проектирования PageObjects (была произведена инкапсуляция отдельных элементов в функции доступа к элементам 
+интерфейса высшего уровня).
+<p>Реализована параметризация функций.
+<p>К тестам подключена система отчетности о прохождении автотестов Allure Reports с вложениями (логи, скриншоты, видео, etc). 
+В UI-тестах отображено два типа передачи шагов теста в отчет:
+ 
+- Лямбда-степы через with allure.step
+- Декораторы @step с автоматическим подтягиванием названия из названия функций и её параметров
+
+<p>Также по факту прохождения теста отправляется уведомление с результатами в Telegram и на электронную почту.
+<p>Браузер в UI-тестах запускается удаленно в Selenoid.
+<p>Реализована интеграция с Allure TestOps.
+
+## :heavy_check_mark: Кратко
+- [x] `Page Object` с шагами `Fluent of Invocations`
+- [x] `Application Manager`
+- [x] Параметризованные тесты
+- [x] Параметризованный запуск тестов
+- [x] `Request/response` спецификация для API тестов
+- [x] Self-documenting code
+- [x] Autotests as test documentation
+- [x] Запуск тестов, используя `Jenkins` и `Selenoid`
+- [x] `Allure Reports` с вложениями (логи, скриншоты, видео)
+- [x] Логирование requests/responses в `Allure Reports`
+- [x] Интеграция с `Allure TestOps`
+- [x] Отправка результатов тестирования по `email` и в `Telegram`
+
+## :gear: Технологии и инструменты:
+
+<div align="center">
+  <img src="https://github.com/Yunaika/yunaika/blob/main/img/logos/python.webp" title="Python" alt="Python" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/Yunaika/yunaika/blob/main/img/logos/pytest.png" title="Pytest" alt="Pytest" width="45" height="45"/>&nbsp; 
+  <img src="https://github.com/Yunaika/yunaika/blob/main/img/logos/selenium-original.svg" title="Selenium" alt="Selenium" width="40" height="40"/>&nbsp;  
+  <img src="https://github.com/Yunaika/yunaika/blob/main/img/logos/selene.png" title="Selene" alt="Selene" width="50" height="50"/>&nbsp;
+  <img src="https://github.com/Yunaika/yunaika/blob/main/img/logos/selenoid.png" title="Selenoid" alt="Selenoid" width="40" height="40"/>&nbsp;  
+  <img src="https://github.com/Yunaika/yunaika/blob/main/img/logos/pycharm.png" title="PyCharm" alt="PyCharm" width="40" height="40"/>&nbsp;    
+  <img src="https://github.com/Yunaika/yunaika/blob/main/img/logos/jenkins.png" title="Jenkins" alt="Jenkins" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/Yunaika/yunaika/blob/main/img/logos/Allure.svg" title="Allure Report" alt="Allure Report" width="40" height="40"/>&nbsp;
+  <img src="https://fs.getcourse.ru/fileservice/file/download/a/159627/sc/333/h/32108dd5b6c9c9c3cf4220fe6b2cc7fc.svg" title="Allure TestOps" alt="Allure TestOps" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/Yunaika/yunaika/blob/main/img/logos/Telegram.svg" title="Telegram" alt="Telegram" width="40" height="40"/>&nbsp;
+</div>
+
+## :heavy_check_mark: Реализованные UI-проверки
+
+> - авторизация зарегистрированным пользователем;
+> - добавление курса в 'Хочу пройти';
+> - поступление на курс:
+>   - авторизованным пользователем;
+>   - неавторизованным пользователем;
+> - поиск:
+>   - бесплатного курса с сертификатом;
+>   - несуществующего курса;
+> - открытие поп-ап окна 'Новости' из меню.
+
+## :heavy_check_mark: Реализованные API-проверки
+
+> - OAuth 2.0 авторизация:
+>   - зарегистрированным пользователем;
+>   - зарегистрированным пользователем с невалидным паролем;
+>   - несуществующим пользователем;
+> - получение курс-листа по номеру;
+> - получение информации профиля:
+>   - существующего пользователя;
+>   - несуществующего пользователя;
+> - изменение имени зарегистрированным пользователем.
+
+## <img width="4%" title="Jenkins" src="https://github.com/Yunaika/yunaika/blob/main/img/logos/jenkins.png"> Запуск тестов из [Jenkins](https://jenkins.autotests.cloud/job/juliamur_python_autotests_stepik_diplom/)
+
+Для запуска тестов из Jenkins:
+1. Необходимо нажать кнопку "Собрать с параметрами".
+<img src="img/screen/Screenshot_7.jpg" alt="Jenkins"/>
+2. Выбрать параметры.
+<img src="img/screen/Screenshot_8.jpg" alt="Jenkins"/>
+3. Нажать кнопку "Собрать".
+
+### :heavy_plus_sign: Параметры сборки
+
+> - BROWSER_NAME (браузер (Chrome, Firefox), по умолчанию Chrome)
+> - BROWSER_VERSION (версия браузера, по умолчанию 100)
