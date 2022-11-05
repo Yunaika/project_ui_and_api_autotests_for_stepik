@@ -1,3 +1,4 @@
+
 # Пример организации автотестирования для образовательной платформы <a target="_blank" href="https://stepik.org/">Stepik</a>
 > Stepik — многофункциональная образовательная платформа и конструктор
 онлайн-курсов. Цель платформы — сделать образование открытым и удобным.
@@ -11,6 +12,12 @@
   - [UI](#heavy_check_mark-реализованные-ui-проверки)
   - [API](#heavy_check_mark-реализованные-api-проверки)
 - [Запуск тестов из Jenkins](#-запуск-тестов-из-jenkins)
+- Отчеты:
+  - [Allure](#bar_chart-отчеты-о-прохождении-тестов-доступны-в-allure)
+  - [Telegram](#-telegram)
+- [Allure TestOps](#-проект-интегрирован-с-allure-testOps)
+- [Видео прогона теста](#movie_camera-пример-видео-прогона-теста)
+
 
 ## :heavy_check_mark: Описание
 В проекте представлены примеры UI и API автоматизации на Python. 
@@ -31,7 +38,6 @@
 ## :heavy_check_mark: Кратко
 - [x] `Page Object` с шагами `Fluent of Invocations`
 - [x] `Application Manager`
-- [x] Параметризованные тесты
 - [x] Параметризованный запуск тестов
 - [x] `Request/response` спецификация для API тестов
 - [x] Self-documenting code
@@ -60,14 +66,14 @@
 ## :heavy_check_mark: Реализованные UI-проверки
 
 > - авторизация зарегистрированным пользователем;
-> - добавление курса в 'Хочу пройти';
+> - добавление курса в 'Wishlist';
 > - поступление на курс:
 >   - авторизованным пользователем;
 >   - неавторизованным пользователем;
 > - поиск:
 >   - бесплатного курса с сертификатом;
 >   - несуществующего курса;
-> - открытие поп-ап окна 'Новости' из меню.
+> - открытие поп-ап окна 'News' из меню.
 
 ## :heavy_check_mark: Реализованные API-проверки
 
@@ -85,12 +91,41 @@
 
 Для запуска тестов из Jenkins:
 1. Необходимо нажать кнопку "Собрать с параметрами".
-<img src="https://github.com/Yunaika/yunaika/blob/main/img/logos/jenkins.png" alt="Jenkins"/>
+<img src="media/screenshots/jenkins_1.jpg" alt="Jenkins"/>
 2. Выбрать параметры.
-<img src="https://github.com/Yunaika/yunaika/blob/main/img/logos/jenkins.png" alt="Jenkins"/>
+<img src="media/screenshots/jenkins_2.jpg" alt="Jenkins"/>
 3. Нажать кнопку "Собрать".
 
 ### :heavy_plus_sign: Параметры сборки
 
-> - BROWSER_NAME (браузер (Chrome, Firefox), по умолчанию Chrome)
-> - BROWSER_VERSION (версия браузера, по умолчанию 100)
+> - BROWSER_NAME — браузер _(Chrome, Firefox)_, по умолчанию Chrome
+> - BROWSER_VERSION — версия браузера _(chrome: 100.0, 99.0; firefox: 98.0, 97.0)_, по умолчанию 100.0
+
+## :bar_chart: Отчеты о прохождении тестов доступны в Allure
+
+### <img width="3%" title="Allure" src="https://github.com/Yunaika/yunaika/blob/main/img/logos/Allure.svg"> Allure
+
+#### Примеры отображения тестов
+
+<img src="media/screenshots/allure_reports_1.jpg" alt="Allure"/>
+
+### <img width="3%" title="Telegram" src="https://github.com/Yunaika/yunaika/blob/main/img/logos/telegram.png"> Telegram
+
+Настроена отправка отчета в Telegram
+
+<img src="media/screenshots/telegram.jpg" alt="Telegram"/>
+
+## Проект интегрирован с <img width="3.4%" title="Allure" src="https://fs.getcourse.ru/fileservice/file/download/a/159627/sc/333/h/32108dd5b6c9c9c3cf4220fe6b2cc7fc.svg"> Allure TestOps 
+
+#### Автоматически собраны тест-кейсы
+
+<img src="media/screenshots/allure_testops.jpg" alt="Allure TestOps"/>
+
+## :movie_camera: Пример видео прогона теста
+
+В отчетах Allure для каждого UI-теста прикреплен не только скриншот, но и видео прохождения теста
+
+<p align="center">
+  <img title="Video" src="media/video/video_test_search_free_course_with_certificate.gif">
+</p>
+
