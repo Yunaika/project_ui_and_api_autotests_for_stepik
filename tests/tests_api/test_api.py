@@ -15,7 +15,7 @@ from pytest_voluptuous import S
 @allure.label('owner', 'juliamur')
 @allure.feature('API')
 @allure.story('Authorization')
-@allure.title('Authorization succeeded with oauth2 by registered user')
+@allure.title('Authorization succeeded with OAuth 2.0 by registered user')
 def test_successful_authorization_with_oauth2_by_registered_user():
     # WHEN
     response = stepik.login_oauth2_and_get_token(os.getenv('CLIENT_ID'), os.getenv('CLIENT_SECRET'))
@@ -29,7 +29,7 @@ def test_successful_authorization_with_oauth2_by_registered_user():
 @allure.label('owner', 'juliamur')
 @allure.feature('API')
 @allure.story('Authorization')
-@allure.title('Authorization with oauth2 with incorrect password')
+@allure.title('Authorization with OAuth 2.0 with incorrect password')
 def test_unsuccessful_authorization_with_incorrect_password():
     # WHEN
     response = stepik.login_oauth2_and_get_token(os.getenv('CLIENT_ID'), 'bad password')
@@ -117,7 +117,7 @@ def test_get_nonexistent_user_profile_info():
 @allure.label('owner', 'juliamur')
 @allure.feature('API')
 @allure.story('Profile')
-@allure.title('Update_registered_user_first_name')
+@allure.title('Update registered user first name')
 def test_update_user_first_name():
     # PRECONDITION
     profile_id = os.getenv('PROFILE_ID')
