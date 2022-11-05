@@ -88,7 +88,7 @@ def setup_browser(window_size, request):
 def pre_pause_in_wait(wait: selene.core.wait.Wait):
     def decorator(for_):
         def decorated(fn):
-            time.sleep(0.3)
+            time.sleep(0.1)
             return for_(fn)
 
         return decorated
