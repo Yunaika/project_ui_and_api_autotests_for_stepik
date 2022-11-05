@@ -36,11 +36,11 @@ def load_env():
 def window_size(request):
     return request.param
 
-@pytest.fixture(scope='function')
+@pytest.fixture(scope='session')
 def get_option_browser_name(request):
     return request.config.getoption('--browser_name')
 
-@pytest.fixture(scope='function')
+@pytest.fixture(scope='session')
 def get_option_browser_version(request):
     return request.config.getoption('--browser_version')
 
