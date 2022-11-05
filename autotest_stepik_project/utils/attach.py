@@ -5,7 +5,7 @@ from allure_commons.types import AttachmentType
 def add_screenshot(browser):
     png = browser.driver.get_screenshot_as_png()
     allure.attach(body=png,
-                  name='page_screenshot',
+                  name='page_screenshot' + browser.driver.session_id,
                   attachment_type=AttachmentType.PNG,
                   extension='.png')
 
@@ -14,7 +14,7 @@ def add_logs(browser):
     try:
         log = "".join(f'{text}\n' for text in browser.driver.get_log(log_type='browser'))
         allure.attach(body=log,
-                      name='browser_logs',
+                      name='browser_logs' + browser.driver.session_id,
                       attachment_type=AttachmentType.TEXT,
                       extension='.log')
     except Exception:
@@ -24,7 +24,7 @@ def add_logs(browser):
 def add_html(browser):
     html = browser.driver.page_source
     allure.attach(body=html,
-                  name='page_source',
+                  name='page_source' + browser.driver.session_id,
                   attachment_type=AttachmentType.HTML,
                   extension='.html')
 
