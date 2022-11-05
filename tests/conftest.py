@@ -36,9 +36,16 @@ def load_env():
 def window_size(request):
     return request.param
 
+@pytest.fixture(scope='function')
+def get_option_browser_name(request):
+    return request.config.getoption('--browser_name')
 
 @pytest.fixture(scope='function')
-def setup_browser(window_size, request):
+def get_option_browser_version(request):
+    return request.config.getoption('--browser_version')
+
+@pytest.fixture(scope='function')
+def setup_browser(window_size, get_option_browser_name, get_option_browser_version):
     browser.config.base_url = stepik_url
     # browser.config.hold_browser_open = 'True'
     browser.config.timeout = 10
@@ -53,10 +60,10 @@ def setup_browser(window_size, request):
         browser.config.window_width = 375
         browser.config.window_height = 667
 
-    browser_name = request.config.getoption('--browser_name')
+    browser_name = get_option_browser_name
     browser_name = browser_name if browser_name != '' else DEFAULT_BROWSER
 
-    browser_version = request.config.getoption('--browser_version')
+    browser_version = get_option_browser_version
     browser_version = browser_version if browser_version != "" else DEFAULT_BROWSER_VERSION
 
     selenoid_capabilities = {
