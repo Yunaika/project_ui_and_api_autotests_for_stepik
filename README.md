@@ -54,7 +54,7 @@
   <img src="https://github.com/Yunaika/yunaika/blob/main/img/logos/jenkins.png" title="Jenkins" alt="Jenkins" width="40" height="40"/>&nbsp;
   <img src="https://github.com/Yunaika/yunaika/blob/main/img/logos/Allure.svg" title="Allure Report" alt="Allure Report" width="40" height="40"/>&nbsp;
   <img src="https://fs.getcourse.ru/fileservice/file/download/a/159627/sc/333/h/32108dd5b6c9c9c3cf4220fe6b2cc7fc.svg" title="Allure TestOps" alt="Allure TestOps" width="40" height="40"/>&nbsp;
-  <img src="https://github.com/Yunaika/yunaika/blob/main/img/logos/Telegram.svg" title="Telegram" alt="Telegram" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/Yunaika/yunaika/blob/main/img/logos/telegram.png" title="Telegram" alt="Telegram" width="40" height="40"/>&nbsp;
 </div>
 
 ## :heavy_check_mark: Реализованные UI-проверки
@@ -85,9 +85,9 @@
 
 Для запуска тестов из Jenkins:
 1. Необходимо нажать кнопку "Собрать с параметрами".
-<img src="img/screen/Screenshot_7.jpg" alt="Jenkins"/>
+<img src="https://github.com/Yunaika/yunaika/blob/main/img/logos/jenkins.png" alt="Jenkins"/>
 2. Выбрать параметры.
-<img src="img/screen/Screenshot_8.jpg" alt="Jenkins"/>
+<img src="https://github.com/Yunaika/yunaika/blob/main/img/logos/jenkins.png" alt="Jenkins"/>
 3. Нажать кнопку "Собрать".
 
 ### :heavy_plus_sign: Параметры сборки
