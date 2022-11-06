@@ -145,9 +145,9 @@ class TestsSearch:
         app.given_opened_catalog()
 
         app.catalog_page.search.set_text_to_search(search_query)\
-            .set_with_certificate()\
-            .set_free_course()\
-            .submit()
+                               .set_with_certificate()\
+                               .set_free_course()\
+                               .submit()
 
         # THEN
 
