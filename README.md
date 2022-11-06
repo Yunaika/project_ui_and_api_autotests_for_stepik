@@ -109,6 +109,8 @@
 
 <img src="media/screenshots/allure_reports_1.jpg" alt="Allure"/>
 
+<img src="media/screenshots/allure_reports_2.jpg" alt="Allure"/>
+
 ### <img width="3%" title="Telegram" src="https://github.com/Yunaika/yunaika/blob/main/img/logos/telegram.png"> Telegram
 
 Настроена отправка отчета в Telegram
