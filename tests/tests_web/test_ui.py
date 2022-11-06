@@ -152,8 +152,8 @@ class TestsSearch:
         # THEN
 
         app.catalog_page.search_result.course_cards.should_have_title(search_query)\
-            .should_have_certificate()\
-            .should_have_free_price()
+                                                   .should_have_certificate()\
+                                                   .should_have_free_price()
 
     @allure.tag("ui", "web")
     @allure.severity(Severity.NORMAL)
