@@ -32,7 +32,7 @@ def load_env():
     load_dotenv()
 
 
-@pytest.fixture(params=['desktop', 'tablet', 'mobile'])
+@pytest.fixture(scope='function', params=['desktop', 'tablet', 'mobile'])
 def window_size(request):
     return request.param
 
@@ -90,19 +90,3 @@ def setup_browser(window_size, get_option_browser_name, get_option_browser_versi
     add_screenshot(browser)
     add_video(browser)
     browser.quit()
-
-
-# def pre_pause_in_wait(wait: selene.core.wait.Wait):
-#     def decorator(for_):
-#         def decorated(fn):
-#             time.sleep(0.15)
-#             return for_(fn)
-#
-#         return decorated
-#
-#     return decorator
-#
-#
-# @pytest.fixture(scope='function', autouse=True)
-# def browser_management():
-#     browser.config._wait_decorator = pre_pause_in_wait
