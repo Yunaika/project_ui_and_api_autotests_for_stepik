@@ -15,7 +15,7 @@
 - Отчеты:
   - [Allure](#bar_chart-отчеты-о-прохождении-тестов-доступны-в-allure)
   - [Telegram](#-telegram)
-- [Allure TestOps](#-проект-интегрирован-с-allure-testOps)
+- [Allure TestOps](#briefcase-проект-интегрирован-с-allure-testops)
 - [Видео прогона теста](#movie_camera-пример-видео-прогона-теста)
 
 
@@ -116,7 +116,7 @@
 
 <img src="media/screenshots/telegram.jpg" alt="Telegram"/>
 
-## Проект интегрирован с <img width="3%" title="Allure" src="https://fs.getcourse.ru/fileservice/file/download/a/159627/sc/333/h/32108dd5b6c9c9c3cf4220fe6b2cc7fc.svg"> Allure TestOps 
+## :briefcase: Проект интегрирован с Allure TestOps 
 
 #### Автоматически собраны тест-кейсы
 
