@@ -24,12 +24,12 @@
 <p>При написании тестов применялись инструменты объектно-ориентированной парадигмы, а также использовался шаблон 
 проектирования PageObjects (была произведена инкапсуляция отдельных элементов в функции доступа к элементам 
 интерфейса высшего уровня).
-<p>Реализована параметризация функций.
-<p>К тестам подключена система отчетности о прохождении автотестов Allure Reports с вложениями (логи, скриншоты, видео, etc). 
+<p>Выделены тест-кейсы. Реализована параметризация тестов.
+<p>Подключена система отчетности Allure Reports с вложениями (логи, скриншоты, видео, etc). 
 В UI-тестах отображено два типа передачи шагов теста в отчет:
  
 - Лямбда-степы через with allure.step
-- Декораторы @step с автоматическим подтягиванием названия из названия функций и её параметров
+- Декораторы @step с автоматическим подтягиванием allure.title из названия функций и её параметров
 
 <p>Также по факту прохождения теста отправляется уведомление с результатами в Telegram и на электронную почту.
 <p>Браузер в UI-тестах запускается удаленно в Selenoid.
@@ -41,7 +41,6 @@
 - [x] Параметризованный запуск тестов
 - [x] `Request/response` спецификация для API тестов
 - [x] Self-documenting code
-- [x] Autotests as test documentation
 - [x] Запуск тестов, используя `Jenkins` и `Selenoid`
 - [x] `Allure Reports` с вложениями (логи, скриншоты, видео)
 - [x] Логирование requests/responses в `Allure Reports`
@@ -111,13 +110,13 @@
 
 <img src="media/screenshots/allure_reports_2.jpg" alt="Allure"/>
 
-### <img width="3%" title="Telegram" src="https://github.com/Yunaika/yunaika/blob/main/img/logos/telegram.png"> Telegram
+### <img width="2.5%" title="Telegram" src="https://github.com/Yunaika/yunaika/blob/main/img/logos/telegram.png"> Telegram
 
 Настроена отправка отчета в Telegram
 
 <img src="media/screenshots/telegram.jpg" alt="Telegram"/>
 
-## Проект интегрирован с <img width="3.4%" title="Allure" src="https://fs.getcourse.ru/fileservice/file/download/a/159627/sc/333/h/32108dd5b6c9c9c3cf4220fe6b2cc7fc.svg"> Allure TestOps 
+## Проект интегрирован с <img width="3%" title="Allure" src="https://fs.getcourse.ru/fileservice/file/download/a/159627/sc/333/h/32108dd5b6c9c9c3cf4220fe6b2cc7fc.svg"> Allure TestOps 
 
 #### Автоматически собраны тест-кейсы
 
