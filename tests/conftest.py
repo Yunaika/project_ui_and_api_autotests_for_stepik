@@ -92,17 +92,17 @@ def setup_browser(window_size, get_option_browser_name, get_option_browser_versi
     browser.quit()
 
 
-def pre_pause_in_wait(wait: selene.core.wait.Wait):
-    def decorator(for_):
-        def decorated(fn):
-            time.sleep(0.15)
-            return for_(fn)
-
-        return decorated
-
-    return decorator
-
-
-@pytest.fixture(scope='function', autouse=True)
-def browser_management():
-    browser.config._wait_decorator = pre_pause_in_wait
+# def pre_pause_in_wait(wait: selene.core.wait.Wait):
+#     def decorator(for_):
+#         def decorated(fn):
+#             time.sleep(0.15)
+#             return for_(fn)
+#
+#         return decorated
+#
+#     return decorator
+#
+#
+# @pytest.fixture(scope='function', autouse=True)
+# def browser_management():
+#     browser.config._wait_decorator = pre_pause_in_wait
