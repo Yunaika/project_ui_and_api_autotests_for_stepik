@@ -39,22 +39,24 @@ class CatalogPage:
     class SearchResult:
         class CourseCards:
             course_cards = browser.element('.course-cards').all('.course-cards__item')
-
+            id_course = ''
             @step
             def should_have_title(self, value):
-                self.course_cards.element_by_its('.course-card__title', have.exact_text(value)).should(be.visible)
+                self.id_course = value
+                self.course_cards.element_by_its('.course-card__title', have.exact_text(self.id_course))\
+                                 .should(be.visible)
                 return self
 
             @step
-            def should_have_certificate(self, value):
-                self.course_cards.element_by_its('.course-card__title', have.exact_text(value)) \
+            def should_have_certificate(self):
+                self.course_cards.element_by_its('.course-card__title', have.exact_text(self.id_course)) \
                     .element('.course-card').element('.course-card__widgets') \
                     .element('[data-type="certificate"]').should(have.text('certificate'))
                 return self
 
             @step
-            def should_have_free_price(self, value):
-                self.course_cards.element_by_its('.course-card__title', have.exact_text(value)) \
+            def should_have_free_price(self):
+                self.course_cards.element_by_its('.course-card__title', have.exact_text(self.id_course)) \
                     .element('.course-card').element('.course-card__price') \
                     .element('.format-price_free').should(be.visible)
                 return self
