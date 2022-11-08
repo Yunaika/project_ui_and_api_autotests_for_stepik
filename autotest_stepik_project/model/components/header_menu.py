@@ -4,6 +4,9 @@ from autotest_stepik_project.utils.patching.allure.report import step
 
 
 class HeaderMenu:
+    def __init__(self):
+        self.drop_down_profile_menu = DropDownProfileMenu()
+
     def click_on_logo(self):
         browser.element('.navbar__logo-link').with_(timeout=10).click()
         return self
@@ -25,26 +28,27 @@ class HeaderMenu:
         browser.element('.navbar__profile-toggler').with_(timeout=10).click()
         return self
 
-    class DropDownProfileMenu:
-        def click_on_profile(self):
-            browser.element('[data-qa="menu-item-profile"]').click()
-            return self
 
-        def click_on_settings(self):
-            browser.element('[data-qa="menu-item-settings"]').click()
-            return self
+class DropDownProfileMenu:
+    def click_on_profile(self):
+        browser.element('[data-qa="menu-item-profile"]').click()
+        return self
 
-        def click_on_notifications(self):
-            browser.element('[data-qa="menu-item-notifications"]').click()
-            return self
+    def click_on_settings(self):
+        browser.element('[data-qa="menu-item-settings"]').click()
+        return self
 
-        @step
-        def click_on_news(self):
-            browser.element('[data-qa="menu-item-news"]').click()
-            return self
+    def click_on_notifications(self):
+        browser.element('[data-qa="menu-item-notifications"]').click()
+        return self
 
-        def click_on_logout(self):
-            browser.element('[data-qa="menu-item-logout"]').click()
-            return self
+    @step
+    def click_on_news(self):
+        browser.element('[data-qa="menu-item-news"]').click()
+        return self
 
-    drop_down_profile_menu = DropDownProfileMenu()
+    def click_on_logout(self):
+        browser.element('[data-qa="menu-item-logout"]').click()
+        return self
+
+
