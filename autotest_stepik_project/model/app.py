@@ -3,7 +3,7 @@ import time
 
 from selene.support.shared import browser
 
-from autotest_stepik_project.api_framework.stepik import stepik, stepik_url
+from autotest_stepik_project.framework_api.stepik import stepik, stepik_url
 from autotest_stepik_project.model.components import mobile_banner
 from autotest_stepik_project.model.components.authorization import Authorization
 from autotest_stepik_project.model.components.header_menu import HeaderMenu

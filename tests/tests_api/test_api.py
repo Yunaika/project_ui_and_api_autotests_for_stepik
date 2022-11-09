@@ -4,7 +4,7 @@ import os
 import allure
 from allure_commons.types import Severity
 
-from autotest_stepik_project.api_framework.stepik import stepik
+from autotest_stepik_project.framework_api.stepik import stepik
 from data.user_data import user, user_profile_data
 from data.schemas.stepik_api_schemas import course_lists_schema
 from pytest_voluptuous import S

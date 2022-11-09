@@ -3,7 +3,7 @@ import allure
 import pytest
 
 from allure_commons.types import Severity
-from autotest_stepik_project.api_framework.stepik import stepik
+from autotest_stepik_project.framework_api.stepik import stepik
 from autotest_stepik_project.model import app
 from data.user_data import user_info
 

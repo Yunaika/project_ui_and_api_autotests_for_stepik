@@ -1,13 +1,11 @@
 import os
-import selene
-import time
 import pytest
 
 from selene.support.shared import browser
 from selenium import webdriver
 from dotenv import load_dotenv
-from autotest_stepik_project.api_framework.stepik import stepik_url
-from autotest_stepik_project.utils.attach import add_html, add_screenshot, add_video, add_logs
+from autotest_stepik_project.framework_api.stepik import stepik_url
+from autotest_stepik_project.utils.patching.allure import attach
 
 DEFAULT_BROWSER = 'firefox'
 DEFAULT_BROWSER_VERSION = '98.0'
@@ -85,8 +83,8 @@ def setup_browser(window_size, get_option_browser_name, get_option_browser_versi
 
     yield browser
 
-    add_html(browser)
-    add_logs(browser)
-    add_screenshot(browser)
-    add_video(browser)
+    attach.html(browser)
+    attach.logs(browser)
+    attach.screenshot(browser)
+    attach.video(browser)
     browser.quit()
