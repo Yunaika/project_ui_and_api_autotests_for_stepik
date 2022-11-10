@@ -8,12 +8,12 @@ from autotest_stepik_project.model.components import mobile_banner
 from autotest_stepik_project.model.components.authorization import Authorization
 from autotest_stepik_project.model.components.header_menu import HeaderMenu
 from autotest_stepik_project.model.components.learning_sidebar import LearningSideBar
-from autotest_stepik_project.model.pages import catalog_page
+from autotest_stepik_project.model.pages.catalog_page import CatalogPage
 from autotest_stepik_project.model.pages.course_page import CoursePage
-from autotest_stepik_project.model.pages import courses_active_page
+from autotest_stepik_project.model.pages.courses_active_page import CoursesActivePage
 from autotest_stepik_project.model.pages.main_page import MainPage
 from autotest_stepik_project.model.pages.profile_page import ProfilePage
-from autotest_stepik_project.model.pages import wishlist_page
+from autotest_stepik_project.model.pages.wishlist_page import WishlistPage
 from autotest_stepik_project.utils.patching.allure.report import step
 
 
@@ -21,11 +21,11 @@ auth = Authorization()
 header_menu = HeaderMenu()
 main_page = MainPage()
 profile = ProfilePage()
-catalog_page = catalog_page
+catalog_page = CatalogPage()
 course_page = CoursePage()
 learning_sidebar = LearningSideBar()
-courses_active = courses_active_page
-wishlist_page = wishlist_page
+courses_active = CoursesActivePage()
+wishlist_page = WishlistPage()
 
 @step
 def given_opened_main_page():

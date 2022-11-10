@@ -46,5 +46,7 @@ class ModalDialog:
         return self
 
 
-item = Item()
-modal_dialog = ModalDialog()
+class WishlistPage:
+    def __init__(self):
+        self.item = Item()
+        self.modal_dialog = ModalDialog()

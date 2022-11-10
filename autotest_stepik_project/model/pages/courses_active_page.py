@@ -9,4 +9,6 @@ class Item:
         return self
 
 
-item = Item()
+class CoursesActivePage:
+    def __init__(self):
+        self.item = Item()

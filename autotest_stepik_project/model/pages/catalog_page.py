@@ -72,5 +72,7 @@ class SearchResult:
         return self
 
 
-search = Search()
-search_result = SearchResult()
+class CatalogPage:
+    def __init__(self):
+        self.search = Search()
+        self.search_result = SearchResult()
