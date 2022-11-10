@@ -11,13 +11,15 @@
 - Что проверяем:
   - [UI](#heavy_check_mark-реализованные-ui-проверки)
   - [API](#heavy_check_mark-реализованные-api-проверки)
-- [Запуск тестов из Jenkins](#-запуск-тестов-из-jenkins)
-- [Запуск тестов локально](#computer-локальный-запуск)
+- Запуск тестов:
+  - [Jenkins](#-запуск-тестов-из-jenkins)
+  - [Локально](#computer-локальный-запуск)
 - Отчеты:
   - [Allure](#bar_chart-отчеты-о-прохождении-тестов-доступны-в-allure)
   - [Telegram](#-telegram)
+  - [Email](#email-email)
 - [Allure TestOps](#briefcase-проект-интегрирован-с-allure-testops)
-- [Видео прогона теста](#movie_camera-пример-видео-прогона-теста)
+- [Видео прогона теста](#movie_camera-пример-видео-тестового-прогона)
 
 
 ## :heavy_check_mark: Описание
@@ -136,7 +138,7 @@ allure serve .\allure-results
 
 <img src="media/screenshots/telegram.jpg" alt="Telegram"/>
 
-### Email
+### :email: Email
 
 Настроена отправка отчета на электронную почту
 
